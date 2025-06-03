@@ -13,7 +13,10 @@ const app = express();
 const SECRET_KEY = "blair";
 
 
-app.use(cors());
+app.use(cors({
+  origin: "https://huamemofe.vercel.app"
+}));
+
 app.use(express.json());
 
 mongoose.connect(process.env.MONGODB_URI, {
